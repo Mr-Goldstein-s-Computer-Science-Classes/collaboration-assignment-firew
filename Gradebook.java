@@ -1,10 +1,18 @@
-public class Gradebook {
-    public Gradebook() {
+import java.sql.Array;
+import java.util.ArrayList;
 
+public class Gradebook {
+    private ArrayList<String> assignmentList;
+    private ArrayList<Double> gradeList;
+    private ArrayList<Student> studentList;
+    public Gradebook() {
+        assignmentList = new ArrayList<String>();
+        gradeList = new ArrayList<Double>();
+        studentList = new ArrayList<Student>();
     }
 
     public void createStudent(String name) {
-
+        studentList.add(new Student(name));
     }
 
     public void addAssignment(String assignment) {
