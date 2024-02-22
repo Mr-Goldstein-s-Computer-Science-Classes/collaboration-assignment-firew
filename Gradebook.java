@@ -52,11 +52,23 @@ public class Gradebook {
     }
 
     public double getMaximumGrade(String assignment) {
-
+        ArrayList<Double> grades = gradeList.get(assignmentList.indexOf(assignment));
+        if (grades.size() == 0)
+            return -999;
+        double i = 0;
+        for (double x : grades) {
+            if (x > i)
+                i = x;
+        }
+        return i;
     }
 
     public double getAverageOverall() {
+        double i = 0;
+        for (String x : studentNames) {
 
+        }
+        return i;
     }
 
     public double getMaxOverall() {
@@ -68,7 +80,7 @@ public class Gradebook {
     }
 
     public double getStudentsGrade(String studentName) {
-
+        return studentList.get(studentNames.indexOf(studentName)).getOverallGrade();
     }
 
     public String toString() {
@@ -76,6 +88,6 @@ public class Gradebook {
     }//Returns the names of the students and the names of the assignments as a String
 
     public Student getStudent(String studentName) {
-
+        return studentList.get(studentNames.indexOf(studentName));
     }
 }
