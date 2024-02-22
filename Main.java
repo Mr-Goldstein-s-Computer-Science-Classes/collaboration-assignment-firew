@@ -21,5 +21,17 @@ public class Main {
         grades.gradeAssignment("Stacks and Queues Station Activity", "Patrick", 79.0);
 
         grades.gradeAssignment("Stacks and queues programs", "Tyler", 100.0);
+        grades.gradeAssignment("Stacks and queues programs", "James", 64.0);
+        grades.gradeAssignment("Stacks and queues programs", "Ethan", 100.0);
+        grades.gradeAssignment("Stacks and queues programs", "Scotty", 101.0);
+        grades.gradeAssignment("Stacks and queues programs", "David", 26.0);
+        grades.gradeAssignment("Stacks and queues programs", "Patrick", 99.0);
+
+        grades.gradeAssignment("Stacks and queues quiz", "Tyler", 100.0);
+        grades.gradeAssignment("Stacks and queues quiz", "James", 100.0);
+        grades.gradeAssignment("Stacks and queues quiz", "Ethan", 100.0);
+        grades.gradeAssignment("Stacks and queues quiz", "Scotty", 87.0);
+        grades.gradeAssignment("Stacks and queues quiz", "David", 92.0);
+        grades.gradeAssignment("Stacks and queues quiz", "Patrick", 83.0);
     }
 }
