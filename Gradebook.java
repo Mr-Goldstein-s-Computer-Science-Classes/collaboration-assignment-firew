@@ -3,11 +3,11 @@ import java.util.ArrayList;
 
 public class Gradebook {
     private ArrayList<String> assignmentList;
-    private ArrayList<Double> gradeList;
+    private ArrayList<ArrayList> gradeList;
     private ArrayList<Student> studentList;
     public Gradebook() {
         assignmentList = new ArrayList<String>();
-        gradeList = new ArrayList<Double>();
+        gradeList = new ArrayList<ArrayList>();
         studentList = new ArrayList<Student>();
     }
 
@@ -16,15 +16,25 @@ public class Gradebook {
     }
 
     public void addAssignment(String assignment) {
-
+        assignmentList.add(assignment);
+        gradeList.add(new ArrayList<Double>());
     }
 
     public void gradeAssignment(String assignment, String studentName, double grade) {
-
+        gradeList.get(assignmentList.indexOf(assignment)).add(grade);
+//        studentList.indexOf(studentName).gradeAssignment(assignment, grade);
     }
 
     public double getAverageGrade(String assignment) {
-
+        ArrayList<Double> grades = gradeList.get(assignmentList.indexOf(assignment));
+        if (grades.size() == 0)
+            return -999;
+        double i = 0;
+        int num = grades.size();
+        for (double x : grades) {
+            i+=x;
+        }
+        return i/num;
     }
 
     public double getMinimumGrade(String assignment) {
@@ -47,7 +57,7 @@ public class Gradebook {
 
     }
 
-    public double getStudentsGrade() {
+    public double getStudentsGrade(String studentName) {
 
     }
 
