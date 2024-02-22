@@ -13,6 +13,13 @@ public class Main {
         grades.addAssignment("Stacks and queues quiz");
         grades.addAssignment("Github Exploration");
 
-        
+        grades.gradeAssignment("Stacks and Queues Station Activity", "Tyler", 94.0);
+        grades.gradeAssignment("Stacks and Queues Station Activity", "James", 14.0);
+        grades.gradeAssignment("Stacks and Queues Station Activity", "Ethan", 5.0);
+        grades.gradeAssignment("Stacks and Queues Station Activity", "Scotty", 100.0);
+        grades.gradeAssignment("Stacks and Queues Station Activity", "David", 0.0);
+        grades.gradeAssignment("Stacks and Queues Station Activity", "Patrick", 79.0);
+
+        grades.gradeAssignment("Stacks and queues programs", "Tyler", 100.0);
     }
 }
