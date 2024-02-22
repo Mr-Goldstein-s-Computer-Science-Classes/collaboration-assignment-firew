@@ -33,5 +33,15 @@ public class Main {
         grades.gradeAssignment("Stacks and queues quiz", "Scotty", 87.0);
         grades.gradeAssignment("Stacks and queues quiz", "David", 92.0);
         grades.gradeAssignment("Stacks and queues quiz", "Patrick", 83.0);
+
+        grades.gradeAssignment("Github Exploration", "Tyler", 96.0);
+        grades.gradeAssignment("Github Exploration", "James", 43.0);
+        grades.gradeAssignment("Github Exploration", "Ethan", 100.0);
+        grades.gradeAssignment("Github Exploration", "Scotty", 97.0);
+        grades.gradeAssignment("Github Exploration", "David", 28.0);
+        grades.gradeAssignment("Github Exploration", "Patrick", 100.0);
+
+        System.out.println(grades.toString());
+
     }
 }
