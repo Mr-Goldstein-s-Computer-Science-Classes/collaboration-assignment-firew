@@ -65,18 +65,29 @@ public class Gradebook {
 
     public double getAverageOverall() {
         double i = 0;
+        int num = studentNames.size();
         for (String x : studentNames) {
+            i += getStudentsGrade(x);
+        }
+        return i/num;
+    }
 
+    public double getMaxOverall() {
+        double i = 0;
+        for (String x : studentNames) {
+            if (getStudentsGrade(x) > i)
+                i = getStudentsGrade(x);
         }
         return i;
     }
 
-    public double getMaxOverall() {
-
-    }
-
     public double getMinOverall() {
-
+        double i = 0;
+        for (String x : studentNames) {
+            if (getStudentsGrade(x) < i)
+                i = getStudentsGrade(x);
+        }
+        return i;
     }
 
     public double getStudentsGrade(String studentName) {
