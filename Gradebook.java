@@ -95,7 +95,12 @@ public class Gradebook {
     }
 
     public String toString() {
-
+        String toString = "";
+        for (String x : studentNames) {
+            toString += studentList.get(studentNames.indexOf(x)).toString();
+            toString += "\n";
+        }
+        return toString;
     }//Returns the names of the students and the names of the assignments as a String
 
     public Student getStudent(String studentName) {
