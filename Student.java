@@ -5,6 +5,7 @@ public class Student {
     ArrayList<String> unGraded = new ArrayList<>();
     ArrayList<String> gradedAssignments = new ArrayList<>();
     ArrayList<Double> grades = new ArrayList<>();
+    ArrayList<String> students = new ArrayList<>();
     public Student(String name) {
         this.name = "null";
     }
@@ -15,6 +16,10 @@ public class Student {
 
     private void setAssignName() {
         this.assignName = assignName;
+    }
+
+    private double getGradesSize() {
+        return grades.size();
     }
 
     public void addAssignment(String assignName) {
@@ -31,15 +36,19 @@ public class Student {
     }
 
     public double getAssignmentGrade(String assignment) {
-        return grades.get();
+        return gradedAssignments.get(grades.indexOf());
     }
 
     public double getOverallGrade() {
         double overallGrade = 0.0;
+        for(double g : grades) {
+            overallGrade += g;
+        }
 
+        return overallGrade;
     }
 
     public String toString() {
-
+        return "Name: " + name + " Overall Grade: " + getOverallGrade();
     }
 }
