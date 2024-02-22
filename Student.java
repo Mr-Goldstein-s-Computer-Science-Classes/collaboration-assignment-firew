@@ -3,9 +3,18 @@ public class Student {
     private String name;
     private String assignName;
     ArrayList<String> unGraded = new ArrayList<>();
-    ArrayList<String> graded = new ArrayList<>();
+    ArrayList<String> gradedAssignments = new ArrayList<>();
+    ArrayList<Double> grades = new ArrayList<>();
     public Student(String name) {
         this.name = "null";
+    }
+
+    private String getAssignName() {
+        return assignName;
+    }
+
+    private void setAssignName() {
+        this.assignName = assignName;
     }
 
     public void addAssignment(String assignName) {
@@ -15,15 +24,18 @@ public class Student {
 
     public void gradeAssignment(String assignment, double grade) {
         unGraded.remove(assignment);
-        graded.add(assignment);
+        gradedAssignments.add(assignment);
+        grades.add(grade);
+        grades.set(gradedAssignments.indexOf(assignment), grade);
 
     }
 
     public double getAssignmentGrade(String assignment) {
-
+        return grades.get();
     }
 
     public double getOverallGrade() {
+        double overallGrade = 0.0;
 
     }
 
