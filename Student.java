@@ -6,7 +6,7 @@ public class Student {
     ArrayList<String> gradedAssignments = new ArrayList<>();
     ArrayList<Double> grades = new ArrayList<>();
     public Student(String name) {
-        this.name = "null";
+        this.name = name;
     }
 
     private String getAssignName() {
