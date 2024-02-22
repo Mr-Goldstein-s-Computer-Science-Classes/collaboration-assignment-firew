@@ -15,6 +15,7 @@ public class Gradebook {
 
     public void createStudent(String name) {
         studentList.add(new Student(name));
+        studentNames.add(name);
     }
 
     public void addAssignment(String assignment) {
